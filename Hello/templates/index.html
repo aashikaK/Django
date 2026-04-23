@@ -1,12 +1,11 @@
 <html>
 <head>
-    <title>Index Page</title>
+    <title>Navbar Page</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f6f9;
         }
 
         /* Navbar */
@@ -15,77 +14,90 @@
             justify-content: space-between;
             align-items: center;
             background: linear-gradient(90deg, #4b6cb7, #182848);
-            padding: 15px 30px;
+            padding: 12px 25px;
             color: white;
         }
 
+        /* Left side (search) */
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 7px 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-box button {
+            margin-left: 5px;
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #182848;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #ddd;
+        }
+
+        /* Center logo */
         .logo {
             font-size: 22px;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
+        /* Right side links */
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 15px;
             margin: 0;
+            padding: 0;
         }
 
-        .nav-links li {
-            display: inline;
-        }
-
-        .nav-links a {
+        .nav-links li a {
             text-decoration: none;
             color: white;
-            padding: 8px 12px;
+            padding: 7px 10px;
             border-radius: 5px;
             transition: 0.3s;
         }
 
-        .nav-links a:hover {
+        .nav-links li a:hover {
             background: white;
             color: #182848;
-        }
-
-        /* Content */
-        .content {
-            padding: 30px;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: fit-content;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Navbar -->
     <div class="navbar">
+
+        <!-- Left: Search -->
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
+        </div>
+
+        <!-- Center: Logo -->
         <div class="logo">MySite</div>
 
+        <!-- Right: Links -->
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-    </div>
 
-    <!-- Content -->
-    <div class="content">
-        <div class="card">
-            <h1>Hi welcome to index.html</h1>
-            <p>
-                {{name}} is a good human who is {{age}} years old and earns {{salary}}
-            </p>
-        </div>
     </div>
 
 </body>
