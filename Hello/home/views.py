@@ -14,3 +14,9 @@ def services(request):
 
 def contacts(request):
     return HttpResponse('This is contacts page')
+def web(request):
+    return HttpResponse('This is web page of services')
+def app(request):
+    return HttpResponse('This is app page of services')
+def design(request):
+    return HttpResponse('This is design page of services')
