@@ -74,6 +74,40 @@
             background: white;
             color: #182848;
         }
+        /* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Dropdown items */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #182848;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.dropdown-menu li a:hover {
+    background: #f1f1f1;
+}
+
+
     </style>
 </head>
 
@@ -94,11 +128,43 @@
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
+
+            {% comment %} services section {% endcomment %}
+             <li class="dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+    <ul class="dropdown-menu" id="dropdownMenu">
+        <li><a href="/services/web">Web Development</a></li>
+        <li><a href="/services/app">App Development</a></li>
+        <li><a href="/services/design">UI/UX Design</a></li>
+    </ul>
+</li>
             <li><a href="/contacts">Contact Us</a></li>
         </ul>
 
     </div>
 
+
+    <script>
+function toggleDropdown(event) {
+    event.preventDefault(); // stops page jump
+    let menu = document.getElementById("dropdownMenu");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+// close dropdown when clicking outside
+window.onclick = function(e) {
+    if (!e.target.matches('.dropdown a')) {
+        let menu = document.getElementById("dropdownMenu");
+        if (menu) {
+            menu.style.display = "none";
+        }
+    }
+}
+</script>
 </body>
 </html>
