@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Navbar Page</title>
+    {%block title%} My site {% endblock title%}
 
     <style>
         body {
@@ -142,7 +142,7 @@
         </ul>
 
     </div>
-{%{% block content %}{% endblock %}%}
+{%{% block content %}{% endblock content%}%}
 
     <script>
 function toggleDropdown(event) {
