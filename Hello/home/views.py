@@ -7,13 +7,16 @@ def index(request):
     return render(request,'index.html',context)   #....individual keys in html like name age and salary from render
 
 def about(request):
-    return HttpResponse("This is about page")
+    return render(request,'about.html')
+    # return HttpResponse("This is about page")
 
 def services(request):
-    return HttpResponse('This is services page')
+     return render(request,'services.html')
+    # return HttpResponse('This is services page')
 
 def contacts(request):
-    return HttpResponse('This is contacts page')
+    return render(request,'contact.html')
+    # return HttpResponse('This is contacts page')
 def web(request):
     return HttpResponse('This is web page of services')
 def app(request):
