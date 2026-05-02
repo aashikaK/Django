@@ -1,0 +1,170 @@
+<html>
+<head>
+    <title>Navbar Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #4b6cb7, #182848);
+            padding: 12px 25px;
+            color: white;
+        }
+
+        /* Left side (search) */
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            padding: 7px 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-box button {
+            margin-left: 5px;
+            padding: 7px 12px;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #182848;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #ddd;
+        }
+
+        /* Center logo */
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Right side links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            padding: 7px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background: white;
+            color: #182848;
+        }
+        /* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Hide dropdown menu initially */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Dropdown items */
+.dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    color: #182848;
+    text-decoration: none;
+}
+
+/* Hover effect */
+.dropdown-menu li a:hover {
+    background: #f1f1f1;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <!-- Left: Search -->
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="logo">MySite</div>
+
+        <!-- Right: Links -->
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+
+            {% comment %} services section {% endcomment %}
+             <li class="dropdown">
+    <a href="#" onclick="toggleDropdown(event)">Services ▼</a>
+    <ul class="dropdown-menu" id="dropdownMenu">
+        <li><a href="/services/web">Web Development</a></li>
+        <li><a href="/services/app">App Development</a></li>
+        <li><a href="/services/design">UI/UX Design</a></li>
+    </ul>
+</li>
+            <li><a href="/contacts">Contact Us</a></li>
+        </ul>
+
+    </div>
+{%{% block content %}{% endblock %}%}
+
+    <script>
+function toggleDropdown(event) {
+    event.preventDefault(); // stops page jump
+    let menu = document.getElementById("dropdownMenu");
+
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+// close dropdown when clicking outside
+window.onclick = function(e) {
+    if (!e.target.matches('.dropdown a')) {
+        let menu = document.getElementById("dropdownMenu");
+        if (menu) {
+            menu.style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
