@@ -1,6 +1,8 @@
 <html>
 <head>
-    {%block title%} My site {% endblock title%}
+   <title>
+        {% block title %}My site{% endblock %}
+    </title>
 
     <style>
         body {
@@ -142,7 +144,7 @@
         </ul>
 
     </div>
-{%{% block content %}{% endblock content%}%}
+{% block content %}{% endblock content%}
 
     <script>
 function toggleDropdown(event) {
