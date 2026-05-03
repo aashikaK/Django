@@ -1,6 +1,86 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
-{% block content %}
-this is home page
 
-{% endblock content%}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+
+    <div class="hero-text">
+        <h1>Welcome to MySite 👋</h1>
+        <p>
+            A clean and simple platform built with Django.  
+            Explore services, learn new things, and grow with us.
+        </p>
+
+        <div class="buttons">
+            <a href="/about" class="btn primary">About Us</a>
+            <a href="/services/web" class="btn secondary">Get Started</a>
+        </div>
+    </div>
+
+</div>
+
+<style>
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #182848;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #4b6cb7;
+    color: white;
+}
+
+.primary:hover {
+    background: #3a57a0;
+}
+
+.secondary {
+    background: white;
+    border: 2px solid #4b6cb7;
+    color: #4b6cb7;
+}
+
+.secondary:hover {
+    background: #4b6cb7;
+    color: white;
+}
+</style>
+
+{% endblock %}
