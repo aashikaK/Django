@@ -1,5 +1,125 @@
 {% extends "base.html" %}
-{% block title %}Services{% endblock %}
+
+{% block title %}Contact{% endblock %}
+
 {% block content %}
-This is contact page.
-{% endblock content %}
+
+<div class="contact-container">
+
+    <h1>📩 Contact Us</h1>
+    <p class="subtitle">We’d love to hear from you. Send us a message 👇</p>
+
+    <div class="contact-box">
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+
+            <textarea placeholder="Your Message..." rows="5" required></textarea>
+
+            <button type="submit">Send Message 🚀</button>
+
+        </form>
+
+        <div class="contact-info">
+            <h3>📍 Get in Touch</h3>
+            <p>Email: support@mysite.com</p>
+            <p>Phone: +977 98XXXXXXXX</p>
+            <p>Location: Kathmandu, Nepal</p>
+
+            <p class="note">
+                We usually reply within 24 hours ⏱️
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+.contact-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-container h1 {
+    font-size: 36px;
+    color: #182848;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* FORM */
+.contact-form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #3a57a0;
+}
+
+/* INFO BOX */
+.contact-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+</style>
+
+{% endblock %}

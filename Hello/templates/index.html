@@ -7,10 +7,16 @@
 <div class="hero">
     <div class="hero-text">
         <h1>Welcome to MySite 👋</h1>
+
         <p>
             A modern Django-powered platform to explore web development,
             apps, and design in one place.
         </p>
+
+        <!-- 🖼️ IMAGE HERE -->
+        <img src="https://unsplash.com/photos/closeup-photo-of-eyeglasses-w7ZyuGYNpRQ" 
+             alt="Coding Image" 
+             class="hero-img">
 
         <div class="buttons">
             <a href="/about" class="btn primary">About Us</a>
@@ -83,11 +89,20 @@ body {
     margin-bottom: 25px;
 }
 
+/* 🖼️ IMAGE STYLE */
+.hero-img {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
 /* BUTTONS */
 .buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 20px;
 }
 
 .btn {
