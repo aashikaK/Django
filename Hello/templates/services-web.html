@@ -1,3 +1,123 @@
 {% extends "base.html" %}
- {% block title %}Services{% endblock %}
-{% block content %}This is web page of services{% endblock content %}
+
+{% block title %}Web Development{% endblock %}
+
+{% block content %}
+
+<div class="service-detail">
+
+    <h1>💻 Web Development</h1>
+
+    <p class="intro">
+        We build fast, responsive and modern websites using Django, HTML, CSS and JavaScript.
+        Our focus is performance, design and user experience.
+    </p>
+
+    <div class="features">
+
+        <div class="box">
+            <h3>⚡ Fast Websites</h3>
+            <p>Optimized websites that load quickly and perform smoothly.</p>
+        </div>
+
+        <div class="box">
+            <h3>📱 Responsive Design</h3>
+            <p>Your website looks perfect on mobile, tablet, and desktop.</p>
+        </div>
+
+        <div class="box">
+            <h3>🛠️ Full Stack</h3>
+            <p>Frontend + backend development using Django and modern tools.</p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h2>Need a professional website?</h2>
+        <p>Let’s build something powerful and modern for your idea 🚀</p>
+        <a href="/contacts" class="btn">Contact Us</a>
+    </div>
+
+</div>
+
+<style>
+.service-detail {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-detail h1 {
+    font-size: 38px;
+    color: #182848;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 15px auto 40px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.box {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.box h3 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.cta {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: white;
+    color: #182848;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+</style>
+
+{% endblock %}
