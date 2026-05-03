@@ -1,3 +1,122 @@
 {% extends "base.html" %}
- {% block title %}Services{% endblock %}
-{% block content %}This is web page of services{% endblock content %}
+
+{% block title %}UI/UX Design{% endblock %}
+
+{% block content %}
+
+<div class="service-detail">
+
+    <h1>🎨 UI/UX Design</h1>
+
+    <p class="intro">
+        We create beautiful, user-friendly and modern designs that make your product easy to use and visually stunning.
+    </p>
+
+    <div class="features">
+
+        <div class="box">
+            <h3>🧠 User Research</h3>
+            <p>We understand user behavior to design better experiences.</p>
+        </div>
+
+        <div class="box">
+            <h3>✨ Clean UI Design</h3>
+            <p>Minimal, modern and attractive interfaces that users love.</p>
+        </div>
+
+        <div class="box">
+            <h3>📱 Responsive Design</h3>
+            <p>Designs that work perfectly on mobile, tablet and desktop.</p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h2>Want a stunning design for your product?</h2>
+        <p>Let’s create something beautiful and user-friendly together 🚀</p>
+        <a href="/contacts" class="btn">Contact Us</a>
+    </div>
+
+</div>
+
+<style>
+.service-detail {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-detail h1 {
+    font-size: 38px;
+    color: #182848;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 15px auto 40px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.box {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.box h3 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.cta {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: white;
+    color: #182848;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+</style>
+
+{% endblock %}
