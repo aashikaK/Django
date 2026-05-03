@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}App Development{% endblock %}
+
+{% block content %}
+
+<div class="service-detail">
+
+    <h1>📱 App Development</h1>
+
+    <p class="intro">
+        We design and develop high-quality mobile applications for Android and iOS that are fast, smooth, and user-friendly.
+    </p>
+
+    <div class="features">
+
+        <div class="box">
+            <h3>⚡ Fast Performance</h3>
+            <p>Optimized apps that run smoothly without lag or crashes.</p>
+        </div>
+
+        <div class="box">
+            <h3>🎨 Modern UI</h3>
+            <p>Beautiful and clean interfaces that improve user experience.</p>
+        </div>
+
+        <div class="box">
+            <h3>🔒 Secure Apps</h3>
+            <p>We ensure your data and users are fully protected.</p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h2>Have an idea for an app?</h2>
+        <p>Let’s turn your idea into a real mobile application 🚀</p>
+        <a href="/contacts" class="btn">Contact Us</a>
+    </div>
+
+</div>
+
+<style>
+.service-detail {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-detail h1 {
+    font-size: 38px;
+    color: #182848;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 15px auto 40px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.box {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+}
+
+.box h3 {
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.cta {
+    background: linear-gradient(90deg, #4b6cb7, #182848);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: white;
+    color: #182848;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+</style>
+
+{% endblock %}

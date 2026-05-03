@@ -1,6 +1,93 @@
 {% extends "base.html" %}
 
 {% block title %}About{% endblock %}
+
 {% block content %}
-This is about page
-{% endblock content %}
+
+<div class="about-container">
+
+    <div class="about-box">
+        <h1>About Us 👋</h1>
+
+        <p>
+            Welcome to <b>MySite</b> — a simple and modern platform built using Django.
+            Our goal is to help people learn, build, and grow in web development.
+        </p>
+
+        <p>
+            We focus on creating clean, responsive, and beginner-friendly web experiences.
+            This project is part of a learning journey in full-stack development.
+        </p>
+
+        <div class="stats">
+            <div class="stat">
+                <h2>10+</h2>
+                <p>Projects Built</p>
+            </div>
+
+            <div class="stat">
+                <h2>1</h2>
+                <p>Developer</p>
+            </div>
+
+            <div class="stat">
+                <h2>100%</h2>
+                <p>Learning Mode</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.about-box {
+    max-width: 700px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.about-box h1 {
+    color: #182848;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    margin: 10px;
+}
+
+.stat h2 {
+    color: #4b6cb7;
+    font-size: 28px;
+}
+
+.stat p {
+    font-size: 14px;
+    color: #666;
+}
+</style>
+
+{% endblock %}

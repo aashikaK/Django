@@ -1,4 +1,89 @@
 {% extends "base.html" %}
- 
+
 {% block title %}Services{% endblock %}
-{% block content %}This is services page{% endblock content %}
+
+{% block content %}
+
+<div class="services-container">
+
+    <h1>Our Services 🚀</h1>
+    <p class="subtitle">Click on any service to explore more</p>
+
+    <div class="service-grid">
+
+        <!-- WEB -->
+        <a href="/services/web" class="service-card">
+            <h2>💻 Web Development</h2>
+            <p>We build fast, responsive and modern websites using Django & frontend tech.</p>
+        </a>
+
+        <!-- APP -->
+        <a href="/services/app" class="service-card">
+            <h2>📱 App Development</h2>
+            <p>We create smooth and powerful mobile applications for Android & iOS.</p>
+        </a>
+
+        <!-- DESIGN -->
+        <a href="/services/design" class="service-card">
+            <h2>🎨 UI/UX Design</h2>
+            <p>We design clean, modern and user-friendly interfaces that feel amazing.</p>
+        </a>
+
+    </div>
+
+</div>
+
+<style>
+.services-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services-container h1 {
+    font-size: 36px;
+    color: #182848;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* CARD STYLE */
+.service-card {
+    display: block;
+    width: 280px;
+    padding: 20px;
+    background: white;
+    text-decoration: none;
+    color: #182848;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service-card h2 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* HOVER EFFECT */
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+</style>
+
+{% endblock %}
