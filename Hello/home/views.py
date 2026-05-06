@@ -22,6 +22,8 @@ def contacts(request):
         email= request.POST.get('email')
         subject= request.POST.get('sub')
         message= request.POST.get('msg')
+        contact= Contact(name=name, email=email, subject=subject, created_at= datetime.today())
+        contact.save()
 
     return render(request,'contact.html')
     # return HttpResponse('This is contacts page')
