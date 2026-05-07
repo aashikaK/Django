@@ -1,5 +1,8 @@
 from django.shortcuts import render,redirect
 
+
+
+# pw for aashi is Aashika123
 # Create your views here.
 def index(request):
     return render(request,"index.html")
