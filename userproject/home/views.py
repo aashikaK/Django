@@ -23,4 +23,5 @@ def login(request):
             return render(request,"login.html")
 
 def logout(request):
+    logout(request)
     return render(request,"login.html")
