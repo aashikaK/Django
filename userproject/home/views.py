@@ -13,8 +13,10 @@ def login(request):
         password=request.POST.get('password')
 
         user= authenticate(username=username,password=password)
-
-    return render(request,"login.html")
+        if user is not None:
+            return redirect('/')
+        else:
+            return render(request,"login.html")
 
 def logout(request):
     return render(request,"login.html")
