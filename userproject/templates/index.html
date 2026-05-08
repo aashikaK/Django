@@ -24,7 +24,6 @@
         .navbar h2{
             margin:0;
             color:#38bdf8;
-            letter-spacing:1px;
         }
 
         .avatar{
@@ -51,7 +50,6 @@
         .welcome h1{
             margin:0;
             color:#38bdf8;
-            font-size:26px;
         }
 
         .welcome p{
@@ -105,10 +103,10 @@
 
     <div class="welcome">
 
-        <h1>Welcome, User 👋</h1>
+        <h1>Welcome, {{ request.user.username }} 👋</h1>
 
         <p>
-            This is your personal dashboard space designed for a clean and smooth experience.
+            This is your personal dashboard space.
         </p>
 
     </div>
@@ -117,22 +115,22 @@
 
         <div class="card">
             <h3>Section One</h3>
-            <p>A clean area for displaying organized content.</p>
+            <p>A clean UI block for content display.</p>
         </div>
 
         <div class="card">
             <h3>Section Two</h3>
-            <p>A flexible space for different types of information.</p>
+            <p>Organized layout for information.</p>
         </div>
 
         <div class="card">
             <h3>Section Three</h3>
-            <p>Designed for future structured content display.</p>
+            <p>Reusable UI component section.</p>
         </div>
 
         <div class="card">
             <h3>Section Four</h3>
-            <p>A balanced layout block for general UI elements.</p>
+            <p>Simple structured dashboard block.</p>
         </div>
 
     </div>
