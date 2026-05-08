@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django.contrib.auth.models import Users
 
 
 # pw for aashi is Aashika123
@@ -9,7 +9,7 @@ def index(request):
 
 def login(request):
     if request.method=="POST":
-        
+
     return render(request,"login.html")
 
 def logout(request):
