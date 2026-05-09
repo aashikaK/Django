@@ -24,6 +24,23 @@
         .navbar h2{
             margin:0;
             color:#38bdf8;
+            letter-spacing:1px;
+        }
+
+        .nav-right{
+            display:flex;
+            align-items:center;
+            gap:15px;
+        }
+
+        .user-box{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            background:#0f172a;
+            padding:8px 14px;
+            border-radius:10px;
+            border:1px solid #334155;
         }
 
         .avatar{
@@ -31,6 +48,31 @@
             height:38px;
             border-radius:50%;
             background:#38bdf8;
+            color:black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-weight:bold;
+            font-size:15px;
+        }
+
+        .username{
+            color:#e2e8f0;
+            font-size:14px;
+        }
+
+        .logout-btn{
+            text-decoration:none;
+            background:#ef4444;
+            color:white;
+            padding:10px 16px;
+            border-radius:10px;
+            font-size:14px;
+            transition:0.3s;
+        }
+
+        .logout-btn:hover{
+            background:#dc2626;
         }
 
         .container{
@@ -50,11 +92,13 @@
         .welcome h1{
             margin:0;
             color:#38bdf8;
+            font-size:28px;
         }
 
         .welcome p{
             color:#cbd5e1;
             margin-top:10px;
+            line-height:1.6;
         }
 
         .grid{
@@ -83,6 +127,7 @@
         .card p{
             color:#cbd5e1;
             font-size:14px;
+            line-height:1.5;
         }
 
     </style>
@@ -95,7 +140,25 @@
 
     <h2>DASHBOARD</h2>
 
-    <div class="avatar"></div>
+    <div class="nav-right">
+
+        <div class="user-box">
+
+            <div class="avatar">
+                {{ request.user.username|first|upper }}
+            </div>
+
+            <div class="username">
+                {{ request.user.username }}
+            </div>
+
+        </div>
+
+        <a href="/logout" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
 
 </div>
 
@@ -106,7 +169,7 @@
         <h1>Welcome, {{ request.user.username }} 👋</h1>
 
         <p>
-            This is your personal dashboard space.
+            This is your personal dashboard space designed with a clean and modern interface.
         </p>
 
     </div>
